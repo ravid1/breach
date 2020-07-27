@@ -1,0 +1,56 @@
+:host {
+
+  .breach-item-wrapper {
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #e8e8e8;
+
+    .summary {
+      display: flex;
+      overflow: hidden;
+      .image-container {
+        padding-top: 15px;
+
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+
+      .text-summary {
+        overflow: hidden;
+        padding-left: 20px;
+        .title {
+          margin: 0;
+        }
+        .date {
+          font-size: 14px;
+        }
+        .teaser {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  i {
+    cursor: pointer;
+  }
+}
+
+
+:host-context(.dark-theme) {
+  .breach-item-wrapper {
+    background-color: #222;
+    color: #fff;
+
+    i {
+      color: #fff;
+    }
+  }
+}

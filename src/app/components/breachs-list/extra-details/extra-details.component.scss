@@ -1,0 +1,16 @@
+:host {
+
+  .extra-details {
+    padding-left: 70px;
+
+    .data-item {
+      display: flex;
+      .name {
+        padding-right: 15px;
+        font-weight: bold;
+        width: 100%;
+        max-width: 120px;
+      }
+    }
+  }
+}

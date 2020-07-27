@@ -1,0 +1,7 @@
+<div class="breach-list-wrapper list-group">
+  <div *ngFor="let breach of breachList$ | async; let i = index" class="breach-item">
+    <breach-item [breachData]="breach"
+                 [isCollapsed]="breachListService.collapsedItems[i]"
+                 (itemClicked)="onBreachClicked($event,i)"></breach-item>
+  </div>
+</div>

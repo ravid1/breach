@@ -1,0 +1,16 @@
+<div class="breach-item-wrapper list-group-item list-group-item-action">
+  <div class="summary">
+    <div class="image-container">
+      <img [src]="breachData.LogoPath" [alt]="breachData.LogoPath">
+    </div>
+
+    <div class="text-summary">
+      <h3 class="title">{{breachData.Title}}</h3>
+      <div class="date">{{breachData.BreachDate | date}}</div>
+      <div [class.teaser]="!isCollapsed" [innerHTML]="breachData.Description"></div>
+    </div>
+
+    <i [class]="!isCollapsed ? 'fas fa-angle-double-down' : 'fas fa-angle-double-up'" (click)="toggleDetails()"></i>
+  </div>
+    <extra-details [breachData]="breachData" *ngIf="isCollapsed"></extra-details>
+</div>
